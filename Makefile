@@ -10,7 +10,7 @@ install: build
 
 install-nvim:
 	mkdir -p ${NVIM_SYNTAX_DIR}
-	cp contrib/gentee.vim ${NVIM_SYNTAX_DIR}/gentee.vim
+	cp contrib/vim/syntax/gentee.vim ${NVIM_SYNTAX_DIR}/gentee.vim
 
 clean:
 	rm gentee

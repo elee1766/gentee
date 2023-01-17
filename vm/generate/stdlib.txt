@@ -90,7 +90,7 @@ BaseName(str) str;BaseName
 BitAnd(int,int) int;BITAND                          // int & int
 BitAnd(set,set) set;BitAndºSetSet                   // set & set
 BitNot(int) int;BITNOT                  // ^int
-BitNot(set) set;BitNotºSet              // ^set 
+BitNot(set) set;BitNotºSet              // ^set
 BitOr(int,int) int;BITOR                // int | int
 BitOr(set,set) set;BitOrºSetSet         // set | set
 BitXor(int,int) int;BITXOR              // int ^ int
@@ -98,7 +98,7 @@ bool(arr*) bool;boolºArr
 bool(buf) bool;boolºBuf
 bool(float) bool;boolºFloat
 bool(int) bool;boolºInt
-bool(obj) bool;boolºObj;e 
+bool(obj) bool;boolºObj;e
 bool(obj,bool) bool;boolºObjDef;e
 bool(map*) bool;boolºMap
 bool(str) bool;boolºStr
@@ -106,12 +106,12 @@ buf(str) buf;bufºStr
 Ceil(float) int;CeilºFloat
 ChDir(str);ChDirºStr;er
 ChMode(str,int);ChModeºStr;er
-ClearCarriage(str) str;ClearCarriage 
+ClearCarriage(str) str;ClearCarriage
 CloseFile(file);CloseFile;e
 CloseTarGz(handle);CloseTarGz;e
 CloseZip(handle);CloseZip;e
-Command(str);Command;er                  // $ str 
-CommandOutput(str) str;CommandOutput;er  // $ str 
+Command(str);Command;er                  // $ str
+CommandOutput(str) str;CommandOutput;er  // $ str
 CompressFile(handle,str,str);CompressFile;er
 CopyFile(str,str) int;CopyFileºStrStr;er
 CreateDir(str);CreateDirºStr;er
@@ -149,6 +149,8 @@ ErrID(error) int;ErrID
 error(int,str);errorºIntStr;ev
 ErrText(error) str;ErrText
 ErrTrace(error) arr.trace;ErrTrace;r
+ExecTmpl(str,str,obj) str;ExecTmpl;er
+ExecTmplHTML(str,str,obj) str;ExecTmplHTML;er
 ExistFile(str) bool;ExistFile;er
 exit(int);exit;er
 ExpStr(str,bool) str;ExpStrºBool

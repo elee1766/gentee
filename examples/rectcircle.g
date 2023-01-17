@@ -28,25 +28,25 @@ run {
 4. Calculate the circumference of a circle
 Press any other key to exit
 `)
-        switch action
-        case `1`, `3` {
-            float width = ReadFloat(`The width of the rectangle`)
-            float height = ReadFloat(`The height of the rectangle`)
-            if action == `1` {
-                PrintResult("The area of the rectangle", width * height)
-            } else {
-                PrintResult("The perimeter of the rectangle", 2*(width + height))
-            }
+switch action
+    case `1`, `3` {
+        float width = ReadFloat(`The width of the rectangle`)
+        float height = ReadFloat(`The height of the rectangle`)
+        if action == `1` {
+            PrintResult("The area of the rectangle", width * height)
+        } else {
+            PrintResult("The perimeter of the rectangle", 2*(width + height))
         }
-        case `2` {
-            float radius = ReadFloat(`The radius of the circle`)
-            PrintResult("The area of the circle", PI * radius * radius)
-        }
-        case `4` {
-            PrintResult("The circumference of a circle", 2 * PI * ReadFloat(`The radius of the circle`))
-        }
+    }
+    case `2` {
+        float radius = ReadFloat(`The radius of the circle`)
+        PrintResult("The area of the circle", PI * radius * radius)
+    }
+    case `4` {
+        PrintResult("The circumference of a circle", 2 * PI * ReadFloat(`The radius of the circle`))
+    }
 
-        default: ex = true
+    default: ex = true
     }
 }
 

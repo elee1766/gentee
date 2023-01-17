@@ -7,14 +7,16 @@ endif
 
 syn region genteeString start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=@Spell
 
-syn keyword genteeStatement const run
+syn keyword genteeStatement const run go
 
 
+syn keyword genteeConstant nil
+syn keyword genteeBif typename
 syn keyword genteeBif CYCLE DEPTH IOTA SCRIPT VERSION
 
-syn keyword genteeBif typename
-
 syn keyword genteeBif Join Reverse Slice Sort
+
+syn keyword genteeBif ExecTmpl ExecTmplHTML
 
 syn keyword genteeBif ArchiveName CloseTarGz CloseZip CreateTarGz CreateZip CompressFile ReadTarGz ReadZip TzGz UnpackTarGz UnpackZip Zip
 syn keyword genteeBif Base64 DecodeInt Del EncodeInt Hex Insert SetLen Subbuf UnBase64 UnHex Write
@@ -78,11 +80,11 @@ syn keyword     genteeConditional    if else switch while
 syn keyword     genteeBranch         goto break continue
 syn keyword     genteeLabel          case default
 syn keyword     genteeRepeat         for in
-syn keyword     genteeType const var
+syn keyword     genteeType           const var
 syn keyword     genteeType           struct
 syn match       genteeType              /\>func\>/
 syn match       genteeStatement /^func\>/
-syn keyword     genteeType           int float bool str char arr map buf set obj handle time
+syn keyword     genteeType           int float bool str char arr map buf set obj handle time thread
 
 syn keyword     genteeTodo           contained TODO FIXME XXX
 syn match       genteeLineComment    "\/\/.*" contains=@Spell,genteeTodo
@@ -118,7 +120,7 @@ hi def link genteeFloat         Float
 hi def link genteeOct           Number
 hi def link genteeOctZero       Number
 hi def link genteeString        String
-hi def link genteeRawString        String
+hi def link genteeRawString     String
 hi def link genteeSpecial       Special
 hi def link genteeCharacter     Character
 
